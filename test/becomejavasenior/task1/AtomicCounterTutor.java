@@ -1,6 +1,7 @@
+package becomejavasenior.task1;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Test;
 
@@ -14,7 +15,7 @@ import org.junit.Test;
  * Измениться ли значение?
  */
 public class AtomicCounterTutor {
-    //AtomicInteger counter = new AtomicInteger(0);
+    //AtomicInteger counter1 = new AtomicInteger(0);
     volatile int counter = 0;
 
     class TestThread implements Runnable {
@@ -30,7 +31,7 @@ public class AtomicCounterTutor {
                 synchronized (AtomicCounterTutor.class) {
                     counter++;
                 }
-                //counter.incrementAndGet();
+                //counter1.incrementAndGet();
                 Thread.yield();
             }
         }

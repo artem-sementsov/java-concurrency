@@ -1,3 +1,5 @@
+package becomejavasenior.task1;
+
 import org.junit.Test;
 import sun.security.krb5.internal.TGSRep;
 
@@ -19,6 +21,10 @@ public class AtomicCounterTutor2 {
     /*
     Решение задачи через рефакторинг
     Синхронизация метода работает быстрее, чем синхронизация блока. Поэтому это решение лучше
+
+   Однвко from journaldev
+   When a method is synchronized, it locks the Object, if method is static it locks the Class,
+   so it’s always best practice to use synchronized block to lock the only sections of method that needs synchronization.
 
     Интересное наблюдение - после остановки потока можно вызывать его методы
      */
